@@ -2,7 +2,7 @@ import { Brand } from "@/type-db";
 
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/brands`;
 
-const getBrands = async (): Promise<Brand[]> => { 
+const getBrands = async () : Promise<Brand[]> => { 
     const res = await fetch(URL);
     return (res.json());
 }

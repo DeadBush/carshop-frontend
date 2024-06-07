@@ -9,8 +9,8 @@ import { Car, Shield, Truck } from "lucide-react";
 
 export const revalidate = 0;
 
-const HomePage = async() =>{
-    const products = await getProducts({isFeatured: true});
+const HomePage = async () =>{
+    const products =  await getProducts({isFeatured: true});
     return (
         <>
         <Container className="px-4 md:px-12">

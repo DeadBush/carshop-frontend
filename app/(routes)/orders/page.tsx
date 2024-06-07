@@ -4,7 +4,7 @@ import Container from "@/components/ui/container";
 import { auth } from "@clerk/nextjs/server";
 import { ChevronRight, Home } from "lucide-react";
 import Link from "next/link";
-import PageContent from "../menu/components/page-content";
+import PageContent from "../orders/components/page-content";
 
 export const revalidate = 0;
 

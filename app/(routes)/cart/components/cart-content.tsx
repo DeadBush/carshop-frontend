@@ -39,10 +39,10 @@ const CartContent = ({userId} : CartContentProps) =>{
         const response  = await axios.post(
             `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
             {
-                product : cart.items,
-                userId
+                products : cart.items,
+                userId,
             }
-        )
+        );  
 
         window.location = response.data.url; 
     };

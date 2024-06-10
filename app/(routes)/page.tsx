@@ -19,7 +19,7 @@ const HomePage = async () =>{
                     <p className="px-6 py-1 rounded-full text-neutral-500 border boder-gray-300">Cần mua xe ngay?</p>
                 
                     <h2 className="text-5xl font-bold tracking-wider uppercase text-neutral-700 my-4">
-                        Hãy ghé qua <span className="block py-4">Online Car Shop ngay bây giờ!</span>
+                        Hãy ghé qua <span className="block py-4">Bug Car ngay bây giờ!</span>
                         </h2>
                         <p className="text-base text-center md:text-left text-neutral-500 my-4">
                         Chào mừng bạn đến với Online Car Shop, nơi mang đến cho bạn trải nghiệm mua sắm xe ô tô tuyệt vời nhất.  Chúng tôi tự hào là đại lý uy tín, cung cấp đa dạng các dòng xe từ những thương hiệu hàng đầu thế giới. Với đội ngũ nhân viên chuyên nghiệp và giàu kinh nghiệm, chúng tôi cam kết mang đến cho khách hàng những tư vấn tận tình và dịch vụ hậu mãi xuất sắc. Dù bạn đang tìm kiếm một chiếc xe gia đình tiện nghi, một chiếc SUV mạnh mẽ hay một chiếc xe sang trọng đẳng cấp, chúng tôi đều có thể đáp ứng mọi nhu cầu của bạn. Hãy đến với Online Car Shop để trải nghiệm và lựa chọn chiếc xe mơ ước của bạn ngay hôm nay!

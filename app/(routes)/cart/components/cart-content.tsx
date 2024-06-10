@@ -35,15 +35,16 @@ const CartContent = ({userId} : CartContentProps) =>{
         }
     },[searchParams, cart.removeAll]);
 
-    const onCheckOut = async () =>{
+    const onCheckOut = async () => {
         const response  = await axios.post(
-            `${process.env.NEXT_PUBLIC_APP_URL}/checkout`,{
+            `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
+            {
                 product : cart.items,
                 userId
             }
         )
 
-        window.location = response.data.url 
+        window.location = response.data.url; 
     };
 
     return(

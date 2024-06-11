@@ -88,4 +88,4 @@ const CartItem = ({item}:CartItemProps) => {
     );
 }
 
-export default CartItem;
+export default CartItem;    

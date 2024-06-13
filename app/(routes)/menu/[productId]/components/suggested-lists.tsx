@@ -13,7 +13,7 @@ const SuggestedList = ({products}: SuggestedListProps) => {
     return(
         <>
         <h2 className="text-3xl text-neutral-600 font-semibold">
-            Sản phẩm có liên quan
+            Related products
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gap-y-20 md:gap-x-4 md:gap-y-24 my-6 py-12">

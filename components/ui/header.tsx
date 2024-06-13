@@ -30,7 +30,7 @@ const Header = ({userId} : HeaderProps) =>{
     return <header className={cn("w-full z-50 transition", scrolled ? "fixed top-0 left-0 bg-white shadow-lg" : "bg-transparent")}>
         <Container>
             <div className="relative px-4 sm:px-6 lg:px-12 flex h-16 items-center">
-                <Link href={"/"} className="uppercase flex gap-x-2 font-bold text-neutral-700 text-lg md:text-xl">Bug Car</Link>
+                <Link href={"/"} className="uppercase flex gap-x-2 font-bold text-neutral-700 text-lg md:text-xl">BugCar</Link>
                 
                 <MainNav scrolled={scrolled}/>
 
@@ -41,10 +41,10 @@ const Header = ({userId} : HeaderProps) =>{
                 ) : (
                     <div className="flex items-center space-x-2 ml-4">
                         <Link href={"/sign-in"}>
-                            <Button variant="outline">Đăng nhập</Button>
+                            <Button variant="outline">Sign in</Button>
                         </Link>
                         <Link href={"/sign-in"}>
-                            <Button className="bg-green-400 text-black hover:bg-green-500">Đăng ký</Button>
+                            <Button className="bg-green-400 text-black hover:bg-green-500">Sign up</Button>
                         </Link>
                     </div>
                 )}

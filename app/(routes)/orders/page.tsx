@@ -19,7 +19,7 @@ const OrdersPage =  async() =>{
     <Container className="px-4 md:px-12 my-12 bg-white py-12 min-h-[80vh]">
         <Box className="text-neutral-700 text-sm items-center">
             <Link href="/" className="flex items-center gap-2">
-                <Home className="w-5 h-5"/> Trang chủ
+                <Home className="w-5 h-5"/> Home
             </Link>
 
             <ChevronRight className="w-5 h-5 text-muted-foreground"/>

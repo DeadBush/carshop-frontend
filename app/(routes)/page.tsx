@@ -16,21 +16,21 @@ const HomePage = async () =>{
         <Container className="px-4 md:px-12">
             <section className="grid grid-cols-1 md:grid-cols-2 py-12 pt-16">
                 <div className="flex flex-col items-start justify-start gap-4">
-                    <p className="px-6 py-1 rounded-full text-neutral-500 border boder-gray-300">Cần mua xe ngay?</p>
+                    <p className="px-6 py-1 rounded-full text-neutral-500 border boder-gray-300">Want to buy a new car?</p>
                 
                     <h2 className="text-5xl font-bold tracking-wider uppercase text-neutral-700 my-4">
-                        Hãy ghé qua <span className="block py-4">Bug Car ngay bây giờ!</span>
+                        Visit our <span className="block py-4">BugCar now!</span>
                         </h2>
                         <p className="text-base text-center md:text-left text-neutral-500 my-4">
-                        Chào mừng bạn đến với Online Car Shop, nơi mang đến cho bạn trải nghiệm mua sắm xe ô tô tuyệt vời nhất.  Chúng tôi tự hào là đại lý uy tín, cung cấp đa dạng các dòng xe từ những thương hiệu hàng đầu thế giới. Với đội ngũ nhân viên chuyên nghiệp và giàu kinh nghiệm, chúng tôi cam kết mang đến cho khách hàng những tư vấn tận tình và dịch vụ hậu mãi xuất sắc. Dù bạn đang tìm kiếm một chiếc xe gia đình tiện nghi, một chiếc SUV mạnh mẽ hay một chiếc xe sang trọng đẳng cấp, chúng tôi đều có thể đáp ứng mọi nhu cầu của bạn. Hãy đến với Online Car Shop để trải nghiệm và lựa chọn chiếc xe mơ ước của bạn ngay hôm nay!
+                        Welcome to Online Car Shop, which brings you the ultimate car shopping experience. We are proud to be a reputable dealer, providing a variety of car models from the world&apos;s leading brands. With a team of professional and experienced staff, we are committed to providing customers with dedicated advice and excellent after-sales service. Whether you are looking for a comfortable family car, a powerful SUV or a classy luxury vehicle, we can meet all your needs. Come to Online Car Shop to experience and choose your dream car today!
                     </p>
 
                     <div className="my-4 flex text-center justify-center gap-6 w-full md:w-auto">
                         <Link href={"/menu"}>
-                            <Button className="px-8 md:px-16 py-4 md:py-6 rounded-full bg-hero">Đặt hàng ngay</Button>
+                            <Button className="px-8 md:px-16 py-4 md:py-6 rounded-full bg-hero">Order now!</Button>
                         </Link>
                         <Link href={"/"}>
-                            <Button className="px-8 md:px-16 py-4 md:py-6 rounded-full"variant="outline">Khám phá thêm</Button>
+                            <Button className="px-8 md:px-16 py-4 md:py-6 rounded-full"variant="outline">Explore more</Button>
                         </Link>
                     </div>
                 </div>
@@ -55,48 +55,46 @@ const HomePage = async () =>{
             </section>
 
             <section className="my-4 py-12 flex flex-col items-center justify-center">
-                <h2 className="text-5xl md:text-5xl font-bold tracking-wider uppercase text-neutral-700 my-4">Tại sao nên mua xe của chúng tôi ?</h2>
+                <h2 className="text-5xl md:text-5xl font-bold tracking-wider uppercase text-neutral-700 my-4">Why you need to shopping in our store ?</h2>
                 <p>
-                Mua xe tại cửa hàng của chúng tôi đảm bảo bạn nhận được dịch vụ tận tâm và hỗ trợ chuyên nghiệp từ đội ngũ nhân viên giàu kinh nghiệm. Chúng tôi cung cấp các dòng xe chất lượng cao từ những thương hiệu danh tiếng với mức giá cạnh tranh và chế độ bảo hành ưu đãi. Hãy đến với chúng tôi để trải nghiệm mua sắm xe ô tô dễ dàng và đáng tin cậy nhất!   
+                Buying a car at our store ensures you receive dedicated service and professional support from our experienced staff. We provide high quality vehicles from reputable brands with competitive prices and preferential warranties. Come to us for the easiest and most reliable car shopping experience!   
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full my-6 mt-20">
                     <Card className="shadow-lg rounded-md border-none p-4 py-12 flex flex-col items-center justify-center gap-4">
                         <Car className="w-8 h-8 text-hero"/>
                         <CardTitle className="text-neutral-600">
-                            Xe chính hãng
+                            Genuine Car
                         </CardTitle>
                         <CardDescription className="text-center">
-                            Cửa hàng chúng tôi cung cấp các dòng xe chính hãng từ khắp thế giới
+                            Our store provides you with lots of genuine cars over the world
                         </CardDescription>
                     </Card>
 
                     <Card className="shadow-lg rounded-md border-none p-4 py-12 flex flex-col items-center justify-center gap-4">
                         <Shield className="w-8 h-8 text-hero"/>
                         <CardTitle className="text-neutral-600">
-                            Bảo hành trọn đời
+                            Lifetime Warranty
                         </CardTitle>
                         <CardDescription className="text-center">
-                            Hỗ trợ bảo hành trọn đời cho mỗi lần thanh toán
+                            Lifetime warranty support for every payment
                         </CardDescription>
                     </Card>
 
                     <Card className="shadow-lg rounded-md border-none p-4 py-12 flex flex-col items-center justify-center gap-4">
                         <Truck className="w-8 h-8 text-hero"/>
                         <CardTitle className="text-neutral-600">
-                            Giao hàng nhanh
+                            Fast Delivery
                         </CardTitle>
                         <CardDescription className="text-center">
-                            Hỗ trợ giao hàng cho thanh toán online
+                            Fast delivery service for online payment
                         </CardDescription>
                     </Card>
                 </div>
             </section>
 
             <section className="my-4 py-12 flex flex-col items-center justify-center">
-            <h2 className="text-5xl md:text-5xl font-bold tracking-wider uppercase text-neutral-700 my-4">Các thương hiệu nổi bật</h2>
-                <p>
-                Một số thương hiệu nổi bật của cửa hàng {""}  
-                </p>
+            <h2 className="text-5xl md:text-5xl font-bold tracking-wider uppercase text-neutral-700 my-4">FEATURED BRANDS</h2>
+                <p>Some outstanding brands of the store</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full my-6 mt-20">
                     <Card className="shadow-lg relative  rounded-md border-none flex flex-col items-center justify-end h-96 md:h[520px] bg-hero/30">

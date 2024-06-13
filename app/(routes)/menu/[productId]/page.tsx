@@ -23,12 +23,12 @@ const ProductPage = async ({params}: ProductPageProps) => {
             <Box className="text-neutral-700 text-sm items-center mt-12">
             <Link href={"/"} className="flex items-center gap-2">
                     <Home className="w-4 h-4"/>
-                    Trang chủ
+                    Home
                 </Link>
 
                 <ChevronRight className="w-5 h-5 text-muted-foreground"/>
                 <Link href={"/menu"} className="flex items-center gap-2">
-                    Sản phẩm
+                    Menu
                 </Link>
             </Box>
 

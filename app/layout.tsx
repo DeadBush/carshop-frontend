@@ -11,7 +11,7 @@ import ToastProvider from "@/providers/toast-provider";
 const roboto = Roboto({subsets: ["latin"], variable: "--font-roboto", weight: "100"});
 
 export const metadata: Metadata = {
-  title: "Online Car Shop",
+  title: "BugCar",
   description: "Car Selling Webapp",
 };
 

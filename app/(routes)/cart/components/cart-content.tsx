@@ -55,7 +55,7 @@ const CartContent = ({userId} : CartContentProps) =>{
             <div className="w-full flex items-center justify-between gap-4">
                 <h2 className="text-3xl font-semibold text-neutral-700"></h2>
                 <Button onClick={cart.removeAll} variant={"destructive"}>
-                    Xóa tất cả <Trash className="w-4 h-4 ml-2"/>
+                    Remove all <Trash className="w-4 h-4 ml-2"/>
                 </Button>
             </div>
 
@@ -64,7 +64,7 @@ const CartContent = ({userId} : CartContentProps) =>{
                     {cart.items.length === 0 && (
                         <div className="w-full items-center flex justify-center">
                             <p className="text-3xl text-neutral-600 font-semibold">
-                                Chưa thêm vật phẩm nào vào giỏ hàng
+                                There are no products in cart
                             </p>
                         </div>
                     )}
@@ -78,25 +78,25 @@ const CartContent = ({userId} : CartContentProps) =>{
                 <div className="col-span-4 space-y-8">
                     <Box className="flex-col items-start justify-start gap-2 shadow-lg rounded-lg p-3 space-y-2 bg-slate-50">
                         <h2 className="text-lg text-neutral-700 font-semibold">
-                            Tóm tắt đơn hàng
+                            Order Summary
                         </h2>
 
                         <Separator />
 
                         <Box className="flex-col space-y-2">
                             <div className="flex items-center justify-between w-full px-4 whitespace-nowrap text-muted-foreground">
-                                <p className="text-black font-bold text-base">Tổng cộng</p>
+                                <p className="text-black font-bold text-base">Total</p>
                                 <p className="font-semibold text-2xl text-black">${totalPrice}</p>
                             </div>
                         </Box>
                     </Box>
 
                     <Box className="flex-col items-start justify-start gap-2 shadow-lg rounded-lg p-3 space-y-2 bg-slate-50">
-                        <h2 className="text-lg text-neutral-700 font-semibold">Thanh toán</h2>
+                        <h2 className="text-lg text-neutral-700 font-semibold">Payment</h2>
 
                         <Separator/>
 
-                        <Button className="w-full" onClick={onCheckOut}>Thanh toán</Button>
+                        <Button className="w-full" onClick={onCheckOut}>Checkout</Button>
                     </Box>
                 </div>
             </div>

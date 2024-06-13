@@ -36,12 +36,12 @@ const PageContent = ({products}:PageContentProps) => {
             <Box className="text-neutral-700 text-sm items-center">
                 <Link href={"/"} className="flex items-center gap-2">
                     <Home className="w-4 h-4"/>
-                    Trang chủ
+                    Home
                 </Link>
 
                 <ChevronRight className="w-5 h-5 text-muted-foreground"/>
                 <Link href={"/menu"} className="flex items-center gap-2">
-                    Sản phẩm
+                    Menu
                 </Link>
 
                 {searchParams.get("category") && (
@@ -62,7 +62,7 @@ const PageContent = ({products}:PageContentProps) => {
                 <Box className="gap-3 my-4">
                     {currentParams && (
                         Object.entries(currentParams).map(([key,value]) => (
-                            <div onClick = {() => handleClick(key)} className="px-4 py-1 cursor-pointer hover:shadow-md rounded-md bg-emerald-500/10 text-neutral-600 flex items-center gap-1">
+                            <div key={key} onClick = {() => handleClick(key)} className="px-4 py-1 cursor-pointer hover:shadow-md rounded-md bg-emerald-500/10 text-neutral-600 flex items-center gap-1">
                                 {value}
 
                                 <X className="w-4 h-4"/>
@@ -82,7 +82,7 @@ const PageContent = ({products}:PageContentProps) => {
             }
             </> : <>
             <Box className="items-center justify-center py-12 text-muted-foreground text-xl font-bold col-span-10">
-                Sản phẩm không hiện có
+                There are no products here
             </Box>
             </>}
         </div>

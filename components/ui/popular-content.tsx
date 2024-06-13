@@ -64,13 +64,13 @@ export const PopularContent = ({data}: PopularContentProps) => {
         </div>
 
         <CardDescription className="text-center px-2 my-2">
-            Đây là một sản phẩm
+            This is a product
         </CardDescription>
 
         <div className="w-full flex items-center px-2 mt-4 gap-3">
             <Button variant="outline" className="rounded-full font-bold text-lg text-muted-foreground">${data.price}</Button>
             <Link href={`/menu/${data.id}`} className="w-full">
-                <Button className="bg-hero w-full rounded-full">Mua ngay</Button>
+                <Button className="bg-hero w-full rounded-full">Buy now!</Button>
             </Link>
         </div>
 

@@ -21,15 +21,15 @@ const useCart = create(persist<CartStore>(
             const existingItems = currentItems.find(item=>item.id==data.id);
 
             if(existingItems){
-                return toast("Vật phẩm đã ở trong giỏ hàng")
+                return toast("Product is already added")
             }
             set({items:[...get().items, data]})
-            toast.success("Đã thêm vào giỏ hàng")
+            toast.success("Add completed")
         },
 
         removeItem:(id:string) => {
             set({items:[...get().items.filter(item => item.id !== id)]})
-            toast.success("Vật phẩm đã được xóa khỏi giỏ hàng")
+            toast.success("Remove completed")
         },
 
         removeAll:()=> set({items:[]}),

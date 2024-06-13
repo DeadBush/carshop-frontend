@@ -33,7 +33,7 @@ const ManufacturersFilters = ({manufacturers} : ManufacturersFiltersProps) => {
 
     return (
         <Box className="flex-col gap-2 border-b pb-4 cursor-pointer">
-            <h2 className="text-xl font-semibold text-neutral-700">Nhà sản xuất</h2> 
+            <h2 className="text-xl font-semibold text-neutral-700">Manufacturers</h2> 
             <Box className="flex-col gap-2 mt-2">
                 {manufacturers?.map(manufacturer=>(
                     <div onClick={()=>handleClick(manufacturer.name)} key={manufacturer.id} className={cn("text-sm font-semibold text-neutral-500 flex items-center gap-2", manufacturer.name === searchParams.get("Manufacturer") && "text-hero")}>

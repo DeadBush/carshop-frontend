@@ -15,16 +15,16 @@ const CartPage = () =>{
                 <Box className="text-neutral-700 text-sm items-center">
                 <Link href={"/"} className="flex items-center gap-2">
                     <Home className="w-5 h-5"/>
-                    Trang chủ
+                    Home
                 </Link>
 
                 <ChevronRight className="w-5 h-5 text-muted-foreground"/>
                 <Link href={"/menu"} className="flex items-center gap-2 text-muted-foreground">
-                    Sản phẩm
+                    Menu
                 </Link>
                 <ChevronRight className="w-5 h-5 text-muted-foreground"/>
                 <p className="flex items-center gap-2 text-muted-foreground">
-                    Giỏ hàng
+                    Cart
                 </p>
                 </Box>
 

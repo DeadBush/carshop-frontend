@@ -44,11 +44,9 @@ const CartContent = ({userId} : CartContentProps) =>{
                     userId
                 },
             )
-
             window.location = response.data.url 
-
         } catch(err) {
-            console.log('Checkout failed: ', err)
+            console.log('Checkout failed: ' + err)
         }
     };
 

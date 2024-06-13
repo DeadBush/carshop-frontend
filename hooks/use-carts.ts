@@ -9,7 +9,7 @@ interface CartStore{
     items: Products[],
     addItem:(data:Products)=> void,
     removeItem:(id:string) => void,
-    removeAll:()=>  void,
+    removeAll:() => void,
     updateItemQuantity:(id:string,quantity:number)=>void
 }
 

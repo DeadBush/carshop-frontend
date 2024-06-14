@@ -66,15 +66,19 @@ const CartItem = ({item}:CartItemProps) => {
         {
                     [1,2,3,4,5].map(num => (
                         <div 
-                        key={num} 
-                        className={cn(
-                            "w-8 h-8 cursor-pointer rounded-full flex items-center justify-center border border-hero", qty === num ? "bg-hero shadow-md text-white" : "bg-transparent shadow-none")}
+                            key={num} 
+                            className={cn(
+                                "w-8 h-8 cursor-pointer rounded-full flex items-center justify-center border border-hero", qty === num ? "bg-hero shadow-md text-white" : "bg-transparent shadow-none")}
                             onClick={()=>handleQty(num)}
-                            >
+                        >
                             {num}
                         </div>
                     ))}
             </div>  
+        </Box>
+
+        <Box className="flex items-center justify-center h-full">
+            <h2>${item.price}</h2>
         </Box>
 
         <Box className="flex items-center justify-center h-full">

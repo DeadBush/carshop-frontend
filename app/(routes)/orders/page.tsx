@@ -24,11 +24,11 @@ const OrdersPage =  async() =>{
 
             <ChevronRight className="w-5 h-5 text-muted-foreground"/>
             <p className="flex items-center gap-2 text-muted-foreground">
-                Đơn hàng của tôi
+                Orders
             </p>
         </Box>
         <h2 className="my-4 text-xl font-semibold text-neutral-700"> 
-        Đơn hàng của tôi
+            Orders
         </h2>   
         <PageContent orders = {formattedOrders}/>
     </Container>

@@ -10,6 +10,7 @@ import CartItem from "./cart-item";
 import Box from "@/components/ui/box";
 import { Separator } from "@/components/ui/separator";
 import axios from "axios";
+import Link from "next/link";
 
 interface CartContentProps{
     userId: string | null
@@ -27,22 +28,28 @@ const CartContent = ({userId} : CartContentProps) =>{
 
     useEffect(()=>{
         if(searchParams.get("success")){
-            toast.success("Giao dịch thành công");
+            toast.success("Checkout successfully!");
             cart.removeAll();
         }
         if(searchParams.get("canceled")){
-            toast.error("Có gì đó sai sai");
+            toast.error("Something went wrong!");
         }
     },[searchParams, cart.removeAll]);
 
     const onCheckOut = async () => {
+        console.log('checkout')
         try {
             const response = await axios.post(
-                `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
+                process.env.NEXT_PUBLIC_API_URL +'/checkout',
                 {
                     product : cart.items,
                     userId
                 },
+                {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }
             )
             window.location = response.data.url 
         } catch(err) {
@@ -62,10 +69,16 @@ const CartContent = ({userId} : CartContentProps) =>{
             <div className="w-full lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-8">
                 <div className="col-span-8">
                     {cart.items.length === 0 && (
-                        <div className="w-full items-center flex justify-center">
-                            <p className="text-3xl text-neutral-600 font-semibold">
+                        <div className="w-full items-center flex flex-col items-center">
+                            <p className="text-3xl text-neutral-600 font-semibold mb-10">
                                 There are no products in cart
                             </p>
+                            
+                            <Link href={"/menu"}>
+                                <Button className="bg-emerald-500 rounded hover:bg-emerald-600">
+                                    --- Go Shopping ---
+                                </Button>
+                            </Link>
                         </div>
                     )}
 

@@ -24,7 +24,7 @@ const Footer = () =>{
   
             <div className="flex flex-col items-start justify-start gap-3">
               <h2 className="text-3xl font-semibold">Contact</h2>
-              <p className="text-neutral-500 text-sm">+000 0000 0000</p>
+              <p className="text-neutral-500 text-sm">VN - 0342440220</p>
               <p className="text-neutral-500 text-sm">info@onlinecarshop.com</p>
               <p className="text-neutral-500 text-sm">6 Linh Trung, TP. Thu Duc</p>
             </div>
@@ -45,7 +45,7 @@ const Footer = () =>{
           </div>
           <div className="mx-auto py-8 ">
             <p className="text-center text-xs text-black">
-              &copy; 2023 Online Car Shop, Co. All rights reserved
+              &copy; 2024 BUG CAR UIT, Co. All rights reserved
             </p>
           </div>
         </Container>

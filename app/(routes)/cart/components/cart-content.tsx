@@ -33,22 +33,51 @@ const CartContent = ({userId} : CartContentProps) =>{
         if(searchParams.get("canceled")){
             toast.error("Có gì đó sai sai");
         }
-    },[searchParams, cart.removeAll]);
+    },[searchParams, cart.removeAll, cart]);
+
+    
+
+    // const onCheckOut = async () => {
+    //     try {
+    //         const response = await axios.post(
+    //             `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
+    //             {
+    //                 products : cart.items,
+    //                 userId
+    //             },
+    //         )
+    //         window.location = response.data.url 
+    //     } catch(err) {
+    //         console.log('Checkout failed: ' + err)
+    //     }
+    // };
 
     const onCheckOut = async () => {
+        const url = `${process.env.NEXT_PUBLIC_API_URL}/checkout`;
+        const requestBody = {
+          products: cart.items,
+          userId,
+        };
+      
         try {
-            const response = await axios.post(
-                `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
-                {
-                    product : cart.items,
-                    userId
-                },
-            )
-            window.location = response.data.url 
-        } catch(err) {
-            console.log('Checkout failed: ' + err)
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+          });
+      
+          if (response.ok) {
+            const data = await response.json();
+            window.location = data.url;
+          } else {
+            console.error('Network error:', response.status);
+          }
+        } catch (error) {
+          console.error('Error:', error);
         }
-    };
+      };
 
     return(
         <>

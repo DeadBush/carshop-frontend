@@ -18,44 +18,57 @@ interface CartContentProps{
 
 const CartContent = ({userId} : CartContentProps) =>{
 
-    const cart= useCart()
-
-    const searchParams = useSearchParams()
-
+    const cart = useCart();
+    const searchParams = useSearchParams();
     const totalPrice = cart.items.reduce((total, item) => {
-        return total + Number(item.price * item.qty)
-    },0)
+        return total + Number(item.price * item.qty);
+    }, 0);
 
-    useEffect(()=>{
-        if(searchParams.get("success")){
-            toast.success("Checkout successfully!");
-            cart.removeAll();
+    useEffect(() => {
+        if (searchParams.get("success")) {
+            handleSuccessfulCheckout();
         }
-        if(searchParams.get("canceled")){
-            toast.error("Something went wrong!");
+        if (searchParams.get("canceled")) {
+            handleCanceledCheckout();
         }
-    },[searchParams, cart.removeAll]);
+    }, [searchParams]);
+
+    const handleSuccessfulCheckout = () => {
+        toast.success("Checkout successfully!");
+        cart.removeAll();
+    };
+
+    const handleCanceledCheckout = () => {
+        toast.error("Something went wrong!");
+    };
+
 
     const onCheckOut = async () => {
-        console.log('checkout')
+        const url = `${process.env.NEXT_PUBLIC_API_URL}/checkout`;
+        const requestBody = {
+          products: cart.items,
+          userId,
+        };
+      
         try {
-            const response = await axios.post(
-                process.env.NEXT_PUBLIC_API_URL +'/checkout',
-                {
-                    product : cart.items,
-                    userId
-                },
-                {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }
-            )
-            window.location = response.data.url 
-        } catch(err) {
-            console.log('Checkout failed: ' + err)
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+          });
+      
+          if (response.ok) {
+            const data = await response.json();
+            window.location = data.url;
+          } else {
+            console.error('Network error:', response.status);
+          }
+        } catch (error) {
+          console.error('Error:', error);
         }
-    };
+      };
 
     return(
         <>

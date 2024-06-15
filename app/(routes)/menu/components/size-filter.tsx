@@ -36,9 +36,9 @@ const SizesFilters = ({sizes} : SizesFiltersProps) => {
             <h2 className="text-xl font-semibold text-neutral-700">Sizes</h2> 
             <Box className="flex-col gap-2 mt-2">
                 {sizes?.map(size=>(
-                    <div onClick={()=>handleClick(size.name)} key={size.id} className={cn("text-sm font-semibold text-neutral-500 flex items-center gap-2", size.name === searchParams.get("Size") && "text-hero")}>
+                    <div onClick={()=>handleClick(size.value)} key={size.id} className={cn("text-sm font-semibold text-neutral-500 flex items-center gap-2", size.name === searchParams.get("Size") && "text-hero")}>
                     <p>{size.name} ({size.value})</p>
-                    {size.name === searchParams.get("size") && (
+                    {size.value === searchParams.get("size") && (
                         <Check className="w-4 h-4 text-hero"/>
                     )}
                     </div>

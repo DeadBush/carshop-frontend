@@ -25,7 +25,16 @@ const CartItem = ({item}:CartItemProps) => {
     }
 
     return (
-        <Box className="flex items-center gap-4 border-gray-200 p-3 rounded-lg">
+    <> 
+   <Box className="flex items-center gap-4 border-b-2 border-gray-200 p-3 rounded-t-lg">
+    <div className="w-24 min-w-24 h-8 text-center font-semibold">Image</div>
+    <div className="flex-1 text-left font-semibold">Info</div>
+    <div className="w-24 min-w-24 h-8 text-center font-semibold">Quantity</div>
+    <div className="w-24 min-w-24 h-8 text-center font-semibold">Money</div>
+    <div className="w-24 min-w-24 h-8 text-center font-semibold">Total</div>
+    <div className="w-8 min-w-8 h-8"></div>
+</Box>
+       <Box className="flex items-center gap-4 border-gray-200 p-3 rounded-lg">
             <div className="aspect-square w-24 min-w-24 h-24 min-h-24 rounded-md bg-gray-100 flex items-center justify-center relative overflow-hidden">
                 <Image alt={item.name} fill className="w-full h-full object-contain" src={item.images[0].url}/>
             </div>
@@ -87,6 +96,7 @@ const CartItem = ({item}:CartItemProps) => {
                 <Trash className="h-4 w-4 cursor-pointer text-muted-foreground hover:text-red-500"/>
             </div>
         </Box>
+        </>
     );
 }
 
